@@ -13,7 +13,19 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-          
+          Add an Item...
+          <br/>
+          <input
+          type="text"
+          placeholder="Type item here..."
+          value={this.state.newItem}
+          onChange={e => this.updateInput("newItem", e.target.value)}
+          />
+          <button
+            onClick={() => this.addItem()}
+          >
+            Add
+          </button>
         </div>
       </div>
     )
