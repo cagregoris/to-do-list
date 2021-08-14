@@ -1,38 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 body{
-  background: lightyellow;
+  background: #fbe8a6;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
+  color: #303c6c;
 }
 
 .btn{
-  background: pink;
+  background: #303c6c;
   margin: 20px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   border: none;
   box-shadow: 1px 1px rgb(168, 168, 168);
+  color: white;
+}
+
+.btn:active {
+  background: #303c6c;
+  -webkit-box-shadow: inset 0px 0px 5px #303c6c;
+     -moz-box-shadow: inset 0px 0px 5px #303c6c;
+          box-shadow: inset 0px 0px 5px #303c6c;
+   outline: none;
 }
 
 .add-btn{
-  background: lightblue;
+  background: #d2fdff;
   width: 40px;
   height: 40px;
   margin: 10px;
   border-radius: 50%;
   border: none;
-  box-shadow: 2px 2px rgb(168, 168, 168);
-  
+  box-shadow: .5px .5px rgb(168, 168, 168);
 }
+
+.add-btn:active {
+  background: #d2fdff;
+  -webkit-box-shadow: inset 0px 0px 5px #d2fdff;
+     -moz-box-shadow: inset 0px 0px 5px #d2fdff;
+          box-shadow: inset 0px 0px 5px #d2fdff;
+   outline: none;
+}
+
 .app-title{
   text-align: center;
-  color: lightblue;
+  color: #303c6c;
   font-size: 70px;
 }
 .container{
-  border: 5px solid pink;
+  border: 5px solid #f4976c;
   border-radius: 25px;
   margin-left: 200px;
   margin-right: 200px;
@@ -43,14 +61,14 @@ body{
 .input {
   background: transparent;
   border: none;
-  border-bottom: 2px solid rgb(184, 184, 184);
+  border-bottom: 2px solid #f4976c;
   font-size: 17px;
   padding: 2px 5px;
-  color: rgb(160, 160, 160);
+  color: #f4976c;
 }
 
 .input::placeholder {
-  color: rgb(190, 190, 190);
+  color: #f4976c
 }
 
 .input:focus {
