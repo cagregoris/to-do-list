@@ -10,7 +10,7 @@ class App extends Component {
     }
   }
 
-  updateInput() {
+  updateInput(key, value) {
     //update react state
     this.setState({
       [key]: value
