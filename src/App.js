@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import './app.css'
 
 class App extends Component {
   constructor(props) {
@@ -37,30 +38,55 @@ class App extends Component {
     });
   }
 
+  deleteItem(id) {
+    //copy current list of items
+    const list = [...this.state.list];
+
+    //filter out item being deleted
+    const updatedList = list.filter(item => item.id !== id);
+
+    this.setState({list: updatedList})
+  }
+
   render() {
     return (
-      <div className="App">
-        <div>
+      <div>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="./app.css"></link>
+
+        <h1 className="app-title">MY TO-DO LIST</h1>
+
+        <div className="container">
+          <div
+            style={{
+              padding: 30,
+              textAlign: "left",
+              maxWidth: 500,
+              margin: "auto"
+            }}
+          >
           Add an Item...
           <br/>
           <input
+          className="input"
           type="text"
           placeholder="Type item here..."
           value={this.state.newItem}
           onChange={e => this.updateInput("newItem", e.target.value)}
           />
           <button
+            className="add-btn btn-floating"
             onClick={() => this.addItem()}
           >
             Add
           </button>
           <br/>
-          <ul>
+          <ul className="list">
             {this.state.list.map(item => {
               return(
                 <li key={item.id}>
                   {item.value}
                   <button 
+                  className="btn btn-floating"
                   onClick={() => this.deleteItem(item.id)}
                   >
                     X
@@ -69,6 +95,7 @@ class App extends Component {
               )
             })}
           </ul>
+          </div>
         </div>
       </div>
     )
